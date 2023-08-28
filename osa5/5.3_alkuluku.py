@@ -1,6 +1,6 @@
 luku = int(input("Anna luku: "))
 
-for x in range(2,100):
+for x in range(2,luku):
     if x != luku:
         if luku % x == 0:
             print("Luku "+str(luku)+" ei ole alkuluku")
