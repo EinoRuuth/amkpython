@@ -1,14 +1,14 @@
-lista = []
+joukko = set()
 
 while True:
     nimi = input("Syötä nimi: ")
     if nimi == "":
         break
-    if nimi in lista:
+    if nimi in joukko:
         print("Aiemmin syötetty nimi")
     else:
         print("Uusi nimi")
-        lista.append(nimi)
+        joukko.add(nimi)
 
-for x in lista:
+for x in joukko:
     print(x)
