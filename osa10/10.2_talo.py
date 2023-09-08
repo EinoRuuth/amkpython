@@ -26,17 +26,16 @@ class talo:
     def __init__(self, alin, ylin, hissit):
         self.alin = alin
         self.ylin = ylin
-        nimet = []
+        self.hissit = []
         for x in range(hissit):
-            nimet.append("h"+str(x+1))
-            nimet[-1] = hissi(self.alin, self.ylin)
-        self.hissit = nimet
+            thissi = hissi(self.alin, self.ylin)
+            self.hissit.append(thissi)
         pass
     
     def ajaa_hissiä(self, hissi, kerros):
-        hissi = self.hissit[hissi-1]
-        hissi.siirry_kerrokseen(kerros, hissi)
-        print(hissi, hissi.kerros)
+        hissi2 = self.hissit[hissi-1]
+        hissi2.siirry_kerrokseen(kerros, hissi2)
+        print(f"hissi:{hissi} on nyt kerroksessa:{hissi2.kerros}")
         return
 
 
