@@ -1,8 +1,11 @@
 import requests
+import os
+from dotenv import load_dotenv
 
 paikkakunta = input("Anna paikkakunta: ")
 
-apikey = "fa840d80f415d793c8613a5ce85633ed"
+load_dotenv()
+apikey = os.getenv('apikey')
 
 lokaatiokysely = f"http://api.openweathermap.org/geo/1.0/direct?q={paikkakunta}&limit=1&appid={apikey}"
 lokaatio = requests.get(lokaatiokysely).json()
